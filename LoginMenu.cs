@@ -5,6 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class LoginMenu : MonoBehaviour
 {
+    
+
+
+
+    public void confirmlogin()
+    {
+        //When the user clicks confirm login, this takes the user to the next scene which is the game.
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("321");
+
+    }
+
+
+    public void loginbutton()
+    {
+        //When the user clicks confirm login, this takes the user to the next scene which is the game.
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Debug.Log("123");
+
+    }
     private var formNick = ""; //this is the field where the player will put the name to login
 
     function Start()
@@ -12,7 +34,7 @@ public class LoginMenu : MonoBehaviour
 
         PlayerPrefs.DeleteAll();
     }
-   
+
     function Login(id : int)
     {
 
@@ -112,7 +134,7 @@ public class LoginMenu : MonoBehaviour
 
 
         var form = new WWWForm(); //here you create a new form connection
-                      //add your hash code to the field myform_hash, check that this variable name is the same as in PHP file
+                                  //add your hash code to the field myform_hash, check that this variable name is the same as in PHP file
         var tempURL : String;
         if (Act == "Login")
         {
@@ -188,4 +210,5 @@ public class LoginMenu : MonoBehaviour
 
 
     }
+
 }
